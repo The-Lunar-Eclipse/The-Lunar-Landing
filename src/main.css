@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 1px 1px 0px #fff; /* Subtle text shadow */
+}
+
+body
+{
+    /* ⌄ Starry Night background color ⌄ */
+    background: linear-gradient(to bottom, #4a4174, #070a36);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    -ms-overflow-style: none;
+
+    text-align: center;
+}
+
+body::-webkit-scrollbar { display: none; }
+
+/* ⌄ Starry Night stars ⌄ */
+
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* ^ Starry Night stars ^ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container > h1
+{
+    color: rgb(180, 152, 255);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+.streamers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.streamer {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+.streamer img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.streamer h2 {
+    font-size: 20px;
+    color: #333;
+    padding: 10px 15px;
+}
+
+.aliases {
+    color: #333;
+    margin-top: -20px; /* Adjust space below the name */
+}
+
+.description {
+    padding: 0 15px 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.2s ease-in-out;
+}
+
+#twitch:hover
+{
+    transition: color 0.2s ease-in-out;
+    color: #9147FF;
+}
+
+#youtube:hover
+{
+    transition: color 0.2s ease-in-out;
+    color: #FF0000;
+}
+
+#twitter:hover, #tiktok:hover
+{
+    transition: color 0.2s ease-in-out;
+    color: #1DA1F2;
+}
+
+#discord:hover
+{
+    transition: color 0.2s ease-in-out;
+    color: #5662f6;
+}
+
+#image-fit
+{
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .streamers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .streamer {
+        width: 90%;
+    }
+}
